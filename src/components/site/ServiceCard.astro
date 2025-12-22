@@ -1,0 +1,22 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  bullets?: string[];
+}
+
+const { title, description, bullets = [] } = Astro.props;
+---
+
+<article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-slate-950">
+  <h3 class="text-base font-semibold tracking-tight text-gray-900 dark:text-white">{title}</h3>
+  <p class="mt-2 text-sm text-muted">{description}</p>
+  {bullets.length > 0 && (
+    <ul class="mt-4 list-disc space-y-1 pl-5 text-sm text-muted">
+      {bullets.map((b) => (
+        <li>{b}</li>
+      ))}
+    </ul>
+  )}
+</article>
+
