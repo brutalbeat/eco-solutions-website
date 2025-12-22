@@ -13,7 +13,7 @@ const metadata = {
 
 <SiteLayout metadata={metadata}>
   <section class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-b from-[#f4e9e8] to-transparent dark:from-[#1e1717]/40" />
+    <div class="absolute inset-0 bg-gradient-to-b from-[#e2e2e2] to-transparent dark:from-[#1e1717]/40" />
     <Container class="relative py-14 sm:py-20">
       <div class="grid items-center gap-10 lg:grid-cols-12">
         <div class="lg:col-span-7">
@@ -27,7 +27,7 @@ const metadata = {
           </p>
           <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a class="btn-primary w-full sm:w-auto" href="/services">View services</a>
-            <a class="btn btn-secondary w-full sm:w-auto" href="/#contact">Request a quote</a>
+            <a class="btn btn-secondary w-full sm:w-auto" href="/#contact">Contact us</a>
           </div>
           <ul class="mt-8 grid gap-3 text-sm text-muted sm:grid-cols-3">
             <li class="rounded-xl border border-gray-200 bg-white/80 p-3 dark:border-gray-800 dark:bg-slate-950/50">
@@ -43,7 +43,7 @@ const metadata = {
         </div>
 
         <div class="lg:col-span-5">
-          <div class="rounded-3xl border border-[#f0d9d8] bg-white p-6 shadow-sm dark:border-primary/40 dark:bg-slate-950">
+          <div class="rounded-3xl border border-[#dcdcdc] bg-white p-6 shadow-sm dark:border-primary/40 dark:bg-slate-950">
             <p class="text-sm font-semibold text-gray-900 dark:text-white">Typical clients</p>
             <ul class="mt-4 space-y-3 text-sm text-muted">
               <li class="flex items-start gap-2">
@@ -63,7 +63,7 @@ const metadata = {
                 Warehouses and light industrial
               </li>
             </ul>
-            <div class="mt-6 rounded-2xl bg-[#f7eded] p-4 text-sm text-gray-900 dark:bg-[#1e1717]/40 dark:text-white">
+            <div class="mt-6 rounded-2xl bg-[#ededed] p-4 text-sm text-gray-900 dark:bg-[#1e1717]/40 dark:text-white">
               <p class="font-semibold">Want a walk-through?</p>
               <p class="mt-1 text-muted">Share square footage and schedule needs, and a scope can be prepared quickly.</p>
             </div>
@@ -73,7 +73,7 @@ const metadata = {
     </Container>
   </section>
 
-  <section class="bg-white dark:bg-slate-950">
+  <section class="bg-page dark:bg-slate-950">
     <Container class="py-14">
       <div class="flex items-end justify-between gap-6">
         <div>
@@ -109,7 +109,7 @@ const metadata = {
     </Container>
   </section>
 
-  <section class="bg-gradient-to-b from-transparent to-[#f7eded]/70 dark:to-[#1e1717]/30">
+  <section class="bg-gradient-to-b from-transparent to-[#e0e0e0] dark:to-[#1e1717]/30">
     <Container class="py-14">
       <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">How service is delivered</h2>
       <p class="mt-2 text-sm text-muted">Simple steps to keep expectations clear and results consistent.</p>
@@ -131,51 +131,76 @@ const metadata = {
     </Container>
   </section>
 
-  <section class="bg-white dark:bg-slate-950">
+  <section id="contact" class="bg-page dark:bg-slate-950">
     <Container class="py-14">
-      <div class="grid gap-10 lg:grid-cols-12">
-        <div class="lg:col-span-7">
-          <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Frequently asked questions</h2>
-          <p class="mt-2 text-sm text-muted">Quick answers for common commercial cleaning needs.</p>
-
-          <div class="mt-6 divide-y divide-gray-200 rounded-2xl border border-gray-200 bg-white dark:divide-gray-800 dark:border-gray-800 dark:bg-slate-950">
-            <details class="group p-5">
-              <summary class="cursor-pointer list-none text-sm font-semibold text-gray-900 dark:text-white">
-                Can cleaning be scheduled after hours?
-              </summary>
-              <p class="mt-2 text-sm text-muted">Yes—service is commonly scheduled evenings, early mornings, or weekends.</p>
-            </details>
-            <details class="group p-5">
-              <summary class="cursor-pointer list-none text-sm font-semibold text-gray-900 dark:text-white">
-                Are supplies included?
-              </summary>
-              <p class="mt-2 text-sm text-muted">
-                Supply plans vary by account. A preferred-product list can be followed, or supplies can be provided.
-              </p>
-            </details>
-            <details class="group p-5">
-              <summary class="cursor-pointer list-none text-sm font-semibold text-gray-900 dark:text-white">
-                What industries are a good fit?
-              </summary>
-              <p class="mt-2 text-sm text-muted">
-                Offices, retail, clinics, and facilities that need reliable, checklist-driven cleaning.
-              </p>
-            </details>
-          </div>
+      <div class="mx-auto max-w-3xl space-y-6">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Contact</h2>
+          <p class="mt-2 text-sm text-muted">
+            How can we help? Fill out the form below and we will be in touch as soon as possible.
+          </p>
         </div>
 
-        <aside class="lg:col-span-5">
-          <div class="rounded-3xl border border-gray-200 bg-[#f7eded] p-6 dark:border-gray-800 dark:bg-[#1e1717]/30">
-            <h3 class="text-base font-semibold tracking-tight text-gray-900 dark:text-white">Ready for a quote?</h3>
-            <p class="mt-2 text-sm text-muted">
-              Use the contact details below to request a walk-through and scope. Typical turnaround is 1–2 business days.
-            </p>
-            <div class="mt-6 flex flex-col gap-3 sm:flex-row">
-              <a class="btn-primary w-full sm:w-auto" href="/#contact">Contact</a>
-              <a class="btn btn-secondary w-full sm:w-auto" href="/about">Learn about the team</a>
-            </div>
+        <form
+          class="space-y-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-slate-950"
+          name="contact"
+          method="POST"
+          netlify
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="block text-sm font-semibold text-gray-900 dark:text-white">
+              Name
+              <input
+                class="mt-2 w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 dark:border-gray-700 dark:bg-slate-900 dark:text-white"
+                type="text"
+                name="name"
+                required
+              />
+            </label>
+            <label class="block text-sm font-semibold text-gray-900 dark:text-white">
+              Email
+              <input
+                class="mt-2 w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 dark:border-gray-700 dark:bg-slate-900 dark:text-white"
+                type="email"
+                name="email"
+                required
+              />
+            </label>
           </div>
-        </aside>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="block text-sm font-semibold text-gray-900 dark:text-white">
+              Phone
+              <input
+                class="mt-2 w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 dark:border-gray-700 dark:bg-slate-900 dark:text-white"
+                type="tel"
+                name="phone"
+              />
+            </label>
+            <label class="block text-sm font-semibold text-gray-900 dark:text-white">
+              Location
+              <input
+                class="mt-2 w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 dark:border-gray-700 dark:bg-slate-900 dark:text-white"
+                type="text"
+                name="location"
+                placeholder="City or site address"
+              />
+            </label>
+          </div>
+          <label class="block text-sm font-semibold text-gray-900 dark:text-white">
+            Details
+            <textarea
+              class="mt-2 w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 dark:border-gray-700 dark:bg-slate-900 dark:text-white"
+              name="details"
+              rows="4"
+              placeholder="Include any relevant details here"
+            ></textarea>
+          </label>
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <button type="submit" class="btn-primary w-full sm:w-auto">Send</button>
+            
+          </div>
+        </form>
       </div>
     </Container>
   </section>

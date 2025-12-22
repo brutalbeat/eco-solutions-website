@@ -1,15 +1,12 @@
 export const company = {
   name: 'EcoLog Solutions',
-  tagline: 'Commercial cleaning & janitorial services',
-  serviceArea: 'Serving your local area',
-  phone: '+1 (555) 555-5555',
-  email: 'hello@ecologsolutions.com',
-  hours: 'Mon–Fri 8am–6pm',
-  addressLines: ['EcoLog Solutions', 'Your City, ST'],
+  tagline: 'Building Services and Solutions',
+  serviceArea: 'Serving the GTA since 2018',
+  phone: '+1 (647) 700-5611',
+  email: 'ecologsolutions@gmail.com',
+  addressLines: [ '1-885 Lakeshore Road E, Mississauga, ON L5E 1E2, Canada'],
 };
 
 export const companyLinks = {
-  requestQuote: '/#contact',
   careers: '/careers',
 };
-
