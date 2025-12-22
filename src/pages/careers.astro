@@ -1,0 +1,120 @@
+---
+import SiteLayout from '~/layouts/SiteLayout.astro';
+import Container from '~/components/site/Container.astro';
+import { company } from '~/data/company';
+
+const metadata = {
+  title: 'Careers',
+  description:
+    'Careers at EcoLog Solutions. Build a dependable routine, take pride in clean work, and grow with a commercial cleaning team.',
+};
+
+const applyEmail = company.email;
+const applySubject = encodeURIComponent('Career inquiry');
+---
+
+<SiteLayout metadata={metadata}>
+  <section class="bg-white dark:bg-slate-950">
+    <Container class="py-14 sm:py-20">
+      <p class="text-sm font-semibold text-emerald-700 dark:text-emerald-300">Careers</p>
+      <h1 class="mt-3 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
+        Join a team that takes pride in clean work
+      </h1>
+      <p class="mt-4 max-w-3xl text-base leading-7 text-muted sm:text-lg">
+        EcoLog Solutions hires dependable people who care about details, safety, and consistency. Roles range from evening
+        janitorial to day porter support.
+      </p>
+
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a class="btn-primary w-full sm:w-auto" href={`mailto:${applyEmail}?subject=${applySubject}`}>Apply by email</a>
+        <a class="btn btn-secondary w-full sm:w-auto" href="/#contact">Questions? Contact</a>
+      </div>
+
+      <div class="mt-12 grid gap-6 lg:grid-cols-3">
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-slate-950">
+          <h2 class="text-base font-semibold text-gray-900 dark:text-white">What matters</h2>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-sm text-muted">
+            <li>Reliable attendance and communication</li>
+            <li>Careful work around customers and equipment</li>
+            <li>Comfortable following checklists and routines</li>
+            <li>Safety-first mindset</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-slate-950">
+          <h2 class="text-base font-semibold text-gray-900 dark:text-white">Typical schedules</h2>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-sm text-muted">
+            <li>Evenings and early mornings</li>
+            <li>Part-time or full-time opportunities</li>
+            <li>Weekend projects (as needed)</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-slate-950">
+          <h2 class="text-base font-semibold text-gray-900 dark:text-white">What to send</h2>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-sm text-muted">
+            <li>Name, phone number, and city</li>
+            <li>Availability (days/times)</li>
+            <li>Relevant experience (if any)</li>
+            <li>Preferred role (see below)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12">
+        <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Common openings</h2>
+        <p class="mt-2 text-sm text-muted">
+          Open roles vary by location and season. If a role is not listed, reaching out is still welcome.
+        </p>
+
+        <div class="mt-6 grid gap-6 md:grid-cols-2">
+          <article class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-slate-950">
+            <h3 class="text-base font-semibold text-gray-900 dark:text-white">Evening Janitorial Technician</h3>
+            <p class="mt-2 text-sm text-muted">
+              Routine cleaning of commercial spaces using checklists and safe chemical handling.
+            </p>
+            <ul class="mt-4 list-disc space-y-1 pl-5 text-sm text-muted">
+              <li>Restrooms, breakrooms, floors, trash</li>
+              <li>High-touch wipe-downs</li>
+              <li>Lock-up procedures (as required)</li>
+            </ul>
+          </article>
+          <article class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-slate-950">
+            <h3 class="text-base font-semibold text-gray-900 dark:text-white">Day Porter</h3>
+            <p class="mt-2 text-sm text-muted">Support for high-traffic facilities throughout the day.</p>
+            <ul class="mt-4 list-disc space-y-1 pl-5 text-sm text-muted">
+              <li>Restroom checks and restocking</li>
+              <li>Spill response and spot cleaning</li>
+              <li>Common area touch-ups</li>
+            </ul>
+          </article>
+          <article class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-slate-950">
+            <h3 class="text-base font-semibold text-gray-900 dark:text-white">Floor Care Technician</h3>
+            <p class="mt-2 text-sm text-muted">Periodic floor projects and maintenance programs.</p>
+            <ul class="mt-4 list-disc space-y-1 pl-5 text-sm text-muted">
+              <li>Scrub, strip & wax (VCT)</li>
+              <li>Carpet extraction</li>
+              <li>Equipment care and safety</li>
+            </ul>
+          </article>
+          <article class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-slate-950">
+            <h3 class="text-base font-semibold text-gray-900 dark:text-white">Site Supervisor (Lead)</h3>
+            <p class="mt-2 text-sm text-muted">Lead a small crew and keep quality consistent.</p>
+            <ul class="mt-4 list-disc space-y-1 pl-5 text-sm text-muted">
+              <li>Training and checklist compliance</li>
+              <li>Supply tracking and communication</li>
+              <li>Quality checks and issue resolution</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <div class="mt-12 rounded-3xl border border-gray-200 bg-emerald-50 p-6 dark:border-gray-800 dark:bg-emerald-950/20">
+        <h2 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Equal opportunity</h2>
+        <p class="mt-2 text-sm text-muted">
+          EcoLog Solutions is committed to providing equal employment opportunities. Hiring decisions are based on role
+          requirements, reliability, and job performance.
+        </p>
+      </div>
+    </Container>
+  </section>
+</SiteLayout>
+

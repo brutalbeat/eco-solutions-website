@@ -1,0 +1,68 @@
+---
+import Container from '~/components/site/Container.astro';
+import { company, companyLinks } from '~/data/company';
+---
+
+<header class="sticky top-0 z-50 border-b border-gray-200/70 bg-page/95 backdrop-blur dark:border-gray-800/70">
+  <Container class="py-3">
+    <div class="flex items-center justify-between gap-3">
+      <a href="/" class="flex items-center gap-2 font-semibold tracking-tight text-gray-900 dark:text-white">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-600 text-white">
+          <span class="text-sm font-bold">E</span>
+        </span>
+        <span class="leading-tight">
+          <span class="block text-base sm:text-lg">{company.name}</span>
+          <span class="hidden text-xs text-muted sm:block">{company.tagline}</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-6 md:flex" aria-label="Primary">
+        <a class="text-sm font-medium text-gray-900 hover:text-emerald-700 dark:text-white dark:hover:text-emerald-300" href="/">
+          Home
+        </a>
+        <a
+          class="text-sm font-medium text-gray-900 hover:text-emerald-700 dark:text-white dark:hover:text-emerald-300"
+          href="/services"
+        >
+          Services
+        </a>
+        <a
+          class="text-sm font-medium text-gray-900 hover:text-emerald-700 dark:text-white dark:hover:text-emerald-300"
+          href="/about"
+        >
+          About Us
+        </a>
+        <a
+          class="text-sm font-medium text-gray-900 hover:text-emerald-700 dark:text-white dark:hover:text-emerald-300"
+          href={companyLinks.careers}
+        >
+          Careers
+        </a>
+      </nav>
+
+      <div class="hidden items-center gap-2 md:flex">
+        <a class="btn btn-tertiary" href={`tel:${company.phone.replace(/[^+\d]/g, '')}`}>Call</a>
+        <a class="btn-primary" href={companyLinks.requestQuote}>Request a Quote</a>
+      </div>
+
+      <details class="md:hidden">
+        <summary class="btn btn-secondary list-none px-4 py-2">
+          <span class="sr-only">Open menu</span>
+          Menu
+        </summary>
+        <div class="absolute left-0 right-0 top-[60px] border-b border-gray-200 bg-page dark:border-gray-800">
+          <Container class="py-4">
+            <nav class="grid gap-3" aria-label="Mobile">
+              <a class="py-2 text-sm font-medium text-gray-900 dark:text-white" href="/">Home</a>
+              <a class="py-2 text-sm font-medium text-gray-900 dark:text-white" href="/services">Services</a>
+              <a class="py-2 text-sm font-medium text-gray-900 dark:text-white" href="/about">About Us</a>
+              <a class="py-2 text-sm font-medium text-gray-900 dark:text-white" href={companyLinks.careers}>Careers</a>
+              <a class="btn-primary mt-2 w-full" href={companyLinks.requestQuote}>Request a Quote</a>
+              <a class="btn btn-secondary w-full" href={`tel:${company.phone.replace(/[^+\d]/g, '')}`}>Call</a>
+            </nav>
+          </Container>
+        </div>
+      </details>
+    </div>
+  </Container>
+</header>

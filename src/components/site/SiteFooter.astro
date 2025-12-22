@@ -1,0 +1,62 @@
+---
+import Container from '~/components/site/Container.astro';
+import { company } from '~/data/company';
+---
+
+<footer class="border-t border-gray-200/70 bg-white dark:border-gray-800/70 dark:bg-slate-950">
+  <Container class="py-12">
+    <div class="grid gap-10 md:grid-cols-12">
+      <div class="md:col-span-5">
+        <p class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">{company.name}</p>
+        <p class="mt-2 text-sm text-muted">
+          {company.tagline}. Clear checklists, consistent quality, and flexible schedules for offices, retail, and facilities.
+        </p>
+        <p class="mt-4 text-sm text-muted">{company.serviceArea}</p>
+      </div>
+
+      <div id="contact" class="md:col-span-4">
+        <p class="text-sm font-semibold text-gray-900 dark:text-white">Contact</p>
+        <dl class="mt-3 space-y-2 text-sm text-muted">
+          <div class="flex items-center justify-between gap-4">
+            <dt class="text-gray-700 dark:text-gray-300">Phone</dt>
+            <dd>
+              <a class="text-emerald-700 hover:underline dark:text-emerald-300" href={`tel:${company.phone.replace(/[^+\d]/g, '')}`}>
+                {company.phone}
+              </a>
+            </dd>
+          </div>
+          <div class="flex items-center justify-between gap-4">
+            <dt class="text-gray-700 dark:text-gray-300">Email</dt>
+            <dd>
+              <a class="text-emerald-700 hover:underline dark:text-emerald-300" href={`mailto:${company.email}`}>
+                {company.email}
+              </a>
+            </dd>
+          </div>
+          <div class="flex items-center justify-between gap-4">
+            <dt class="text-gray-700 dark:text-gray-300">Hours</dt>
+            <dd>{company.hours}</dd>
+          </div>
+        </dl>
+        <p class="mt-4 text-xs text-muted">
+          Update contact details in <code>src/data/company.ts</code>.
+        </p>
+      </div>
+
+      <div class="md:col-span-3">
+        <p class="text-sm font-semibold text-gray-900 dark:text-white">Quick links</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="text-muted hover:text-emerald-700 dark:hover:text-emerald-300" href="/services">Services</a></li>
+          <li><a class="text-muted hover:text-emerald-700 dark:hover:text-emerald-300" href="/about">About Us</a></li>
+          <li><a class="text-muted hover:text-emerald-700 dark:hover:text-emerald-300" href="/careers">Careers</a></li>
+          <li><a class="text-muted hover:text-emerald-700 dark:hover:text-emerald-300" href="/privacy">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-col gap-2 border-t border-gray-200/70 pt-6 text-xs text-muted dark:border-gray-800/70 sm:flex-row sm:items-center sm:justify-between">
+      <p>© {new Date().getFullYear()} {company.name}. All rights reserved.</p>
+      <p>Commercial cleaning and janitorial services.</p>
+    </div>
+  </Container>
+</footer>
