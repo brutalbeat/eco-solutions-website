@@ -1,8 +1,6 @@
 ---
 import SiteLayout from '~/layouts/SiteLayout.astro';
 import Container from '~/components/site/Container.astro';
-import ServiceCard from '~/components/site/ServiceCard.astro';
-import { company } from '~/data/company';
 
 const metadata = {
   title: 'Commercial Cleaning & Janitorial Services',
@@ -15,11 +13,11 @@ const metadata = {
   <section class="relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-b from-[#e2e2e2] to-transparent dark:from-[#1e1717]/40" />
     <Container class="relative py-14 sm:py-20">
-      <div class="grid items-center gap-10 lg:grid-cols-12">
-        <div class="lg:col-span-7">
-          <p class="text-sm font-semibold text-primary dark:text-accent">{company.tagline}</p>
-          <h1 class="mt-3 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
-            A cleaner facility, without the headaches
+      <div class="grid items-center gap-10 lg:grid-cols-12 lg:items-stretch">
+        <div class="lg:col-span-6 flex flex-col justify-center gap-6">
+          
+          <h1 class="mt-3 text-5xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
+            A cleaner facility, without the headaches.
           </h1>
           <p class="mt-4 text-base leading-7 text-muted sm:text-lg">
             Reliable teams for offices, retail, and facilities. Expect clear checklists, proactive communication, and
@@ -27,46 +25,37 @@ const metadata = {
           </p>
           <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a class="btn-primary w-full sm:w-auto" href="/services">View services</a>
-            <a class="btn btn-secondary w-full sm:w-auto" href="/#contact">Contact us</a>
+            <a
+              class="inline-flex w-full items-center justify-center rounded-full border-2 border-[#ba2b34] bg-transparent px-6 py-3 font-semibold text-[#ba2b34] transition hover:bg-[#ba2b34] hover:text-white focus-visible:outline-none focus:ring-2 focus:ring-[#ba2b34] focus:border-[#ba2b34] sm:w-auto"
+              href="/#contact"
+            >
+              Contact us
+            </a>
           </div>
-          <ul class="mt-8 grid gap-3 text-sm text-muted sm:grid-cols-3">
-            <li class="rounded-xl border border-gray-200 bg-white/80 p-3 dark:border-gray-800 dark:bg-slate-950/50">
-              Insured & safety-focused
-            </li>
-            <li class="rounded-xl border border-gray-200 bg-white/80 p-3 dark:border-gray-800 dark:bg-slate-950/50">
-              Flexible schedules
-            </li>
-            <li class="rounded-xl border border-gray-200 bg-white/80 p-3 dark:border-gray-800 dark:bg-slate-950/50">
-              Quality checklists
-            </li>
-          </ul>
         </div>
 
-        <div class="lg:col-span-5">
-          <div class="rounded-3xl border border-[#dcdcdc] bg-white p-6 shadow-sm dark:border-primary/40 dark:bg-slate-950">
-            <p class="text-sm font-semibold text-gray-900 dark:text-white">Typical clients</p>
-            <ul class="mt-4 space-y-3 text-sm text-muted">
-              <li class="flex items-start gap-2">
-                <span class="mt-1 inline-block h-2 w-2 rounded-full bg-primary"></span>
-                Offices and shared workspaces
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 inline-block h-2 w-2 rounded-full bg-primary"></span>
-                Retail and showrooms
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 inline-block h-2 w-2 rounded-full bg-primary"></span>
-                Clinics and professional services
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 inline-block h-2 w-2 rounded-full bg-primary"></span>
-                Warehouses and light industrial
-              </li>
-            </ul>
-            <div class="mt-6 rounded-2xl bg-[#ededed] p-4 text-sm text-gray-900 dark:bg-[#1e1717]/40 dark:text-white">
-              <p class="font-semibold">Want a walk-through?</p>
-              <p class="mt-1 text-muted">Share square footage and schedule needs, and a scope can be prepared quickly.</p>
+        <div class="lg:col-span-6">
+          <div class="flex h-full items-stretch">
+            <div class="rounded-3xl border border-primary bg-white p-0 shadow-sm dark:border-primary/60 dark:bg-slate-950 overflow-hidden w-full">
+              <img src="/ecolog1.png" alt="EcoLog logo and mark" class="h-full w-full object-cover" loading="lazy" />
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 overflow-hidden rounded-2xl border border-primary bg-white/80 text-sm text-muted shadow-sm dark:border-primary/60 dark:bg-slate-950/50">
+        <div class="grid divide-y divide-[#ba2b34]/20 dark:divide-[#ba2b34]/30 sm:grid-cols-3 sm:divide-y-0 sm:divide-x">
+          <div class="p-6 text-center">
+            <span class="block text-5xl font-extrabold text-primary">70+</span>
+            <span class="mt-2 block text-base text-muted">Employees</span>
+          </div>
+          <div class="p-6 text-center">
+            <span class="block text-5xl font-extrabold text-primary">40+</span>
+            <span class="mt-2 block text-base text-muted">Locations Served</span>
+          </div>
+          <div class="p-6 text-center">
+            <span class="block text-5xl font-extrabold text-primary">8</span>
+            <span class="mt-2 block text-base text-muted">Years Experience</span>
           </div>
         </div>
       </div>
@@ -77,75 +66,110 @@ const metadata = {
     <Container class="py-14">
       <div class="flex items-end justify-between gap-6">
         <div>
-          <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Services built for busy facilities</h2>
-          <p class="mt-2 text-sm text-muted">Choose recurring cleaning, one-time projects, or specialty add-ons.</p>
+          <h1 class="text-3xl font-bold tracking-tight text-primary dark:text-accent sm:text-4xl">We're built for regulated facilities</h1>
+          
         </div>
-        <a class="hidden text-sm font-semibold text-primary hover:underline dark:text-accent sm:inline" href="/services">
-          See all services
-        </a>
       </div>
 
       <div class="mt-8 grid gap-6 md:grid-cols-3">
-        <ServiceCard
-          title="Recurring janitorial"
-          description="Consistent cleaning on a schedule that fits operations."
-          bullets={['Restrooms & breakrooms', 'Floors, dusting, touchpoints', 'Restocking by request']}
-        />
-        <ServiceCard
-          title="Deep cleaning"
-          description="Targeted refresh for high-traffic areas and details."
-          bullets={['Baseboards & corners', 'Detail dusting', 'High-touch disinfecting']}
-        />
-        <ServiceCard
-          title="Move-in / move-out"
-          description="Turnovers for suites, offices, and commercial spaces."
-          bullets={['Kitchens & restrooms', 'Windows (interior)', 'Floors and spot treatment']}
-        />
-      </div>
+        <div class="rounded-2xl border border-primary bg-white p-6 shadow-sm dark:border-primary/60 dark:bg-slate-950">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Certified & insured</h3>
+          <ul class="mt-3 space-y-2 text-base text-muted list-disc pl-5">
+            <li>WSIB coverage and liability insurance</li>
+            <li>Health & Safety compliance programs</li>
+            <li>Site-specific orientation where required</li>
+          </ul>
+        </div>
 
-      <div class="mt-8 sm:hidden">
-        <a class="btn btn-secondary w-full" href="/services">See all services</a>
+        <div class="rounded-2xl border border-primary bg-white p-6 shadow-sm dark:border-primary/60 dark:bg-slate-950">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Trained teams</h3>
+          <ul class="mt-3 space-y-2 text-base text-muted list-disc pl-5">
+            <li>WHMIS and safe chemical handling</li>
+            <li>Worker Health & Safety Association training</li>
+            <li>Standard operating checklists by site</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-primary bg-white p-6 shadow-sm dark:border-primary/60 dark:bg-slate-950">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Green & responsible</h3>
+          <ul class="mt-3 space-y-2 text-base text-muted list-disc pl-5">
+            <li>Green cleaning products available on request</li>
+            <li>Microfiber and color-coded systems</li>
+            <li>Waste, recycling, and chemical response protocols</li>
+          </ul>
+        </div>
       </div>
     </Container>
   </section>
 
   <section class="bg-gradient-to-b from-transparent to-[#e0e0e0] dark:to-[#1e1717]/30">
     <Container class="py-14">
-      <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">How service is delivered</h2>
-      <p class="mt-2 text-sm text-muted">Simple steps to keep expectations clear and results consistent.</p>
+      <div class="grid gap-8 md:grid-cols-12 md:items-stretch">
+        <div class="md:col-span-6">
+          <div class="overflow-hidden rounded-3xl border border-primary bg-white shadow-sm dark:border-primary/60 dark:bg-slate-950">
+            <img src="/ecolog2.png" alt="EcoLog team" class="h-full w-full object-cover" loading="lazy" />
+          </div>
+        </div>
 
-      <ol class="mt-8 grid gap-6 md:grid-cols-3">
-        <li class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-slate-950">
-          <p class="text-sm font-semibold text-primary dark:text-accent">1) Walk-through</p>
-          <p class="mt-2 text-sm text-muted">Discuss priorities, traffic patterns, and timing.</p>
-        </li>
-        <li class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-slate-950">
-          <p class="text-sm font-semibold text-primary dark:text-accent">2) Scope & checklist</p>
-          <p class="mt-2 text-sm text-muted">Align on tasks, frequency, and quality standards.</p>
-        </li>
-        <li class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-slate-950">
-          <p class="text-sm font-semibold text-primary dark:text-accent">3) Consistent service</p>
-          <p class="mt-2 text-sm text-muted">Reliable crews with ongoing communication and spot checks.</p>
-        </li>
-      </ol>
+        <div class="md:col-span-6 flex h-full flex-col justify-center gap-4">
+          <h2 class="text-3xl font-bold tracking-tight text-primary dark:text-accent sm:text-4xl">Our strength is in our team</h2>
+          <p class="text-sm text-muted sm:text-base">
+            EcoLog’s legacy is built on people who care about doing the job right. We invest in training, safety, and stability so crews can focus on quality. Our clients can feel the difference.
+          </p>
+          <p class="text-sm text-muted sm:text-base">
+            From onboarding to ongoing check-ins, we support our teams with clear checklists, reliable schedules, and the tools they need to deliver consistent results.
+          </p>
+          <div class="pt-2">
+            <a class="btn-primary" href="/careers">Join the team</a>
+          </div>
+        </div>
+      </div>
     </Container>
   </section>
+  <section class="bg-page dark:bg-slate-950">
+    <Container class="py-14">
+      <div class="mx-auto max-w-5xl space-y-8">
+        <div>
+          <h2 class="text-3xl font-bold tracking-tight text-primary dark:text-accent sm:text-4xl">Reviews</h2>
+          <p class="mt-2 text-sm text-muted">See what clients say about working with EcoLog.</p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="h-full rounded-2xl border border-primary bg-white p-5 shadow-sm dark:border-primary/60 dark:bg-slate-950">
+            <p class="text-sm text-muted">
+              “Reliable crews and consistent quality. Communication is proactive and issues get handled quickly.”
+            </p>
+            <p class="mt-4 text-sm font-semibold text-gray-900 dark:text-white">Operations Manager, Office Park</p>
+          </article>
+          <article class="h-full rounded-2xl border border-primary bg-white p-5 shadow-sm dark:border-primary/60 dark:bg-slate-950">
+            <p class="text-sm text-muted">
+              “They follow our safety requirements and keep schedules flexible around tenant needs. Easy to work with.”
+            </p>
+            <p class="mt-4 text-sm font-semibold text-gray-900 dark:text-white">Facilities Lead, Industrial Client</p>
+          </article>
+          <article class="h-full rounded-2xl border border-primary bg-white p-5 shadow-sm dark:border-primary/60 dark:bg-slate-950">
+            <p class="text-sm text-muted">
+              “Green products by request and clear checklists. The team is respectful and thorough every visit.”
+            </p>
+            <p class="mt-4 text-sm font-semibold text-gray-900 dark:text-white">Clinic Administrator</p>
+          </article>
+        </div>
+      </div>
 
   <section id="contact" class="bg-page dark:bg-slate-950">
     <Container class="py-14">
       <div class="mx-auto max-w-3xl space-y-6">
         <div>
-          <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Contact</h2>
+          <h2 class="text-3xl font-bold tracking-tight text-primary dark:text-accent sm:text-4xl">Contact</h2>
           <p class="mt-2 text-sm text-muted">
             How can we help? Fill out the form below and we will be in touch as soon as possible.
           </p>
         </div>
 
         <form
-          class="space-y-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-slate-950"
+          class="space-y-4 rounded-2xl border border-primary bg-white p-6 shadow-sm dark:border-primary/60 dark:bg-slate-950"
           name="contact"
           method="POST"
-          netlify
         >
           <input type="hidden" name="form-name" value="contact" />
           <div class="grid gap-4 sm:grid-cols-2">

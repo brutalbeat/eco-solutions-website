@@ -1,79 +1,116 @@
 ---
 import SiteLayout from '~/layouts/SiteLayout.astro';
 import Container from '~/components/site/Container.astro';
-import ServiceCard from '~/components/site/ServiceCard.astro';
-
 const metadata = {
   title: 'Services',
   description:
     'Janitorial services, deep cleaning, floor care, and facility add-ons for offices, retail, and commercial spaces.',
 };
+
+const services = [
+  {
+    title: 'Professional janitorial services',
+    description: 'Routine cleaning programs tailored to your schedule.',
+    bullets: [
+      'Restrooms, kitchens, common areas',
+      'Dusting, touchpoints, waste & liners',
+      'Elevator and escalator cleaning (cabs, panels, rails)',
+    ],
+  },
+  {
+    title: 'Floor cleaning and refinishing',
+    description: 'Keep hard floors looking their best.',
+    bullets: ['Scrubbing, stripping, waxing', 'Machine burnishing and detailing'],
+  },
+  {
+    title: 'Carpet cleaning',
+    description: 'Maintenance cleans and targeted spot work.',
+    bullets: ['Hot water extraction', 'Traffic lane care', 'Spot treatment'],
+  },
+  {
+    title: 'Marble polishing and refinishing',
+    description: 'Polish, seal, and protect marble surfaces.',
+    bullets: ['Polishing and sealing', 'Stain removal and detailing'],
+  },
+  {
+    title: 'Parking garage pressure washing',
+    description: 'High-pressure cleaning for garages.',
+    bullets: ['Surface wash and degrease', 'Walls, columns, and entry areas'],
+  },
+  {
+    title: 'Emergency cleaning services',
+    description: 'Responsive cleaning when issues arise.',
+    bullets: ['Spill and incident response', 'Odor and debris removal'],
+  },
+];
 ---
 
 <SiteLayout metadata={metadata}>
   <section class="bg-page dark:bg-slate-950">
     <Container class="py-14 sm:py-20">
-      <p class="text-sm font-semibold text-primary dark:text-accent">Services</p>
+      <p class="text-base sm:text-lg font-semibold text-primary dark:text-accent">Services</p>
       <h1 class="mt-3 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
-        Cleaning that fits your operation
+        Cleaning that fits <span class="text-primary">your</span> operation
       </h1>
       <p class="mt-4 max-w-3xl text-base leading-7 text-muted sm:text-lg">
-        Every facility is different. Services are scoped around priorities, traffic, and hours—then delivered with a clear
-        checklist.
+        Every facility is different. Services are scoped around priorities, traffic, and hours, then
+        <span class="text-white dark:text-white font-semibold">delivered</span> with a clear checklist. Check out some of our most common services below.
       </p>
 
-      <div class="mt-10 grid gap-6 md:grid-cols-2">
-        <ServiceCard
-          title="Recurring janitorial"
-          description="Scheduled cleaning for consistent results."
-          bullets={['Restrooms, breakrooms, kitchens', 'Trash/recycling & liners', 'Dusting, touchpoints, spot cleaning']}
-        />
-        <ServiceCard
-          title="Day porter service"
-          description="On-site support for high-traffic facilities."
-          bullets={['Restroom checks & restocking', 'Spill response', 'Entry and common-area tidying']}
-        />
-        <ServiceCard
-          title="Deep cleaning"
-          description="Detail-focused cleaning for periodic resets."
-          bullets={['Baseboards & corners', 'Detail dusting', 'High-touch disinfecting']}
-        />
-        <ServiceCard
-          title="Move-in / move-out"
-          description="Turnovers for suites and commercial spaces."
-          bullets={['Kitchens & restrooms', 'Interior glass (as scoped)', 'Floors and spot treatment']}
-        />
-        <ServiceCard
-          title="Floor care"
-          description="Better appearance and longer floor life."
-          bullets={['VCT strip & wax', 'Machine scrubbing', 'Entry mat programs (as scoped)']}
-        />
-        <ServiceCard
-          title="Carpet care"
-          description="Maintenance cleaning and targeted spot work."
-          bullets={['Hot water extraction', 'Spot treatment', 'High-traffic lane focus']}
-        />
-        <ServiceCard
-          title="Interior glass"
-          description="Cleaner glass for a brighter space."
-          bullets={['Entry doors', 'Conference room glass', 'Interior windows (access permitting)']}
-        />
-        <ServiceCard
-          title="Post-construction / remodel"
-          description="Detailed cleaning after building work."
-          bullets={['Dust removal', 'Sticker/adhesive cleanup (as scoped)', 'Final polish and wipe-downs']}
-        />
+      <div class="mt-10 space-y-6">
+        {services.map((service, idx) => {
+          const isReversed = idx % 2 === 1;
+          const layout = isReversed ? 'md:flex-row-reverse' : 'md:flex-row';
+          let imageSrc = idx % 2 === 0 ? '/ecolog1.png' : '/ecolog2.png';
+          if (service.title === 'Professional janitorial services') {
+            imageSrc = '/ecolog3.png';
+          }
+          if (service.title === 'Floor cleaning and refinishing') {
+            imageSrc = '/ecolog4.png';
+          }
+          if (service.title === 'Carpet cleaning') {
+            imageSrc = '/ecolog5.png';
+          }
+          if (service.title === 'Marble polishing and refinishing') {
+            imageSrc = '/ecolog6.png';
+          }
+          if (service.title === 'Parking garage pressure washing') {
+            imageSrc = '/ecolog7.png';
+          }
+          if (service.title === 'Emergency cleaning services') {
+            imageSrc = '/ecolog8.png';
+          }
+
+          return (
+            <article
+              class="overflow-hidden rounded-3xl border border-primary bg-white shadow-sm dark:border-primary/60 dark:bg-slate-950"
+            >
+              <div class={`flex flex-col items-stretch ${layout}`}>
+                <div class="w-full md:w-6/12 md:h-full">
+                  <img src={imageSrc} alt={service.title} class="h-full w-full object-cover" loading="lazy" />
+                </div>
+                <div class="w-full md:w-6/12 p-6 md:p-8 flex flex-col justify-center gap-4 text-left">
+                  <h3 class="text-3xl font-semibold tracking-tight text-gray-900 dark:text-white">{service.title}</h3>
+                  <p class="text-base text-primary sm:text-lg dark:text-accent">{service.description}</p>
+                  <ul class="mt-3 list-disc space-y-3 pl-5 text-base text-muted sm:text-lg">
+                    {service.bullets.map((item) => (
+                      <li>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </article>
+          );
+        })}
       </div>
 
-      <div class="mt-10 rounded-3xl border border-gray-200 bg-[#ededed] p-6 dark:border-gray-800 dark:bg-[#1e1717]/30">
-        <h2 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">How scopes are set</h2>
-        <p class="mt-2 text-sm text-muted">
-          A walk-through is used to confirm square footage, surface types, priorities, and frequency. A checklist is then
-          shared so expectations stay clear.
+      <div class="mt-10 rounded-3xl border border-primary bg-[#ededed] p-8 text-center dark:border-primary/60 dark:bg-[#1e1717]/30">
+        <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Custom scopes</h2>
+        <p class="mt-3 text-base text-primary sm:text-lg dark:text-accent">
+          If your requirements aren't listed above, let us know, and we'd be happy to discuss custom services to your building's unique needs.
         </p>
-        <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+        <div class="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <a class="btn-primary w-full sm:w-auto" href="/#contact">Contact us</a>
-          <a class="btn btn-secondary w-full sm:w-auto" href="/careers">Join the team</a>
         </div>
       </div>
     </Container>
