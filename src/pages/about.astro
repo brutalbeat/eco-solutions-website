@@ -5,7 +5,7 @@ import Container from '~/components/site/Container.astro';
 const metadata = {
   title: 'About Us',
   description:
-    'Learn how EcoLog Solutions delivers reliable commercial cleaning with clear checklists, consistent teams, and proactive communication.',
+    'Learn how Ecolog Solutions delivers reliable commercial cleaning with clear checklists, consistent teams, and proactive communication.',
 };
 ---
 
@@ -25,52 +25,64 @@ const metadata = {
 
       <div class="mt-12 grid gap-8 lg:grid-cols-12">
         <div class="lg:col-span-7">
-          <h2 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">What clients can expect</h2>
+          <h2 class="text-3xl font-bold tracking-tight text-white dark:text-white sm:text-4xl">
+            What clients can expect
+          </h2>
           <div class="mt-6 grid gap-6 sm:grid-cols-2">
-            <div class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-slate-950">
+            <div
+              class="rounded-2xl border border-primary bg-white p-6 shadow-sm dark:border-primary/60 dark:bg-slate-950"
+            >
               <h3 class="text-base font-semibold text-gray-900 dark:text-white">Clear scope</h3>
-              <p class="mt-2 text-sm text-muted">A checklist defines tasks and frequency, so results match expectations.</p>
+              <p class="mt-2 text-sm text-muted">
+                A checklist defines tasks and frequency, so results match expectations.
+              </p>
             </div>
-            <div class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-slate-950">
+            <div
+              class="rounded-2xl border border-primary bg-white p-6 shadow-sm dark:border-primary/60 dark:bg-slate-950"
+            >
               <h3 class="text-base font-semibold text-gray-900 dark:text-white">Proactive communication</h3>
               <p class="mt-2 text-sm text-muted">Fast updates when needs change, with simple escalation paths.</p>
             </div>
-            <div class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-slate-950">
+            <div
+              class="rounded-2xl border border-primary bg-white p-6 shadow-sm dark:border-primary/60 dark:bg-slate-950"
+            >
               <h3 class="text-base font-semibold text-gray-900 dark:text-white">Reliable crews</h3>
               <p class="mt-2 text-sm text-muted">Consistent staffing wherever possible to build trust and routine.</p>
             </div>
-            <div class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-slate-950">
+            <div
+              class="rounded-2xl border border-primary bg-white p-6 shadow-sm dark:border-primary/60 dark:bg-slate-950"
+            >
               <h3 class="text-base font-semibold text-gray-900 dark:text-white">Quality checks</h3>
               <p class="mt-2 text-sm text-muted">Periodic spot checks and feedback loops to keep standards high.</p>
             </div>
           </div>
         </div>
 
-        <aside class="lg:col-span-5">
-          <div class="rounded-3xl border border-gray-200 bg-[#ededed] p-6 dark:border-gray-800 dark:bg-[#1e1717]/30">
-            <h2 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Values</h2>
-            <ul class="mt-4 space-y-3 text-sm text-muted">
-              <li class="flex items-start gap-2">
-                <span class="mt-1 inline-block h-2 w-2 rounded-full bg-primary"></span>
-                Respect for facilities and staff
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 inline-block h-2 w-2 rounded-full bg-primary"></span>
-                Safety and accountability
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 inline-block h-2 w-2 rounded-full bg-primary"></span>
-                Continuous improvement
-              </li>
-            </ul>
-
-            <div class="mt-8">
-              <h3 class="text-sm font-semibold text-gray-900 dark:text-white">Looking for a career?</h3>
-              <p class="mt-2 text-sm text-muted">Join a team that values reliability, respect, and craftsmanship.</p>
-              <a class="btn-primary mt-4 w-full" href="/careers">View careers</a>
-            </div>
+        <aside class="lg:col-span-5 flex lg:pt-14">
+          <div
+            class="h-full w-full overflow-hidden rounded-3xl border border-primary bg-white shadow-sm dark:border-primary/60 dark:bg-slate-950"
+          >
+            <img
+              src="/ecolog10.png"
+              alt="Ecolog team at work"
+              class="block h-full w-full object-cover"
+              loading="lazy"
+            />
           </div>
         </aside>
+      </div>
+
+      <div class="mt-10 space-y-3">
+        <h2 class="text-3xl font-bold tracking-tight text-white dark:text-white sm:text-4xl">Our story</h2>
+        <p class="w-full text-sm text-muted sm:text-base">
+          Ecolog started as a small crew focused on dependable cleaning and clear checklists. Over the years, we grew by
+          earning trust: adding trained teams, safety programs, and specialized services that support regulated
+          facilities. Today, our legacy is built on consistency: the same care for people, predictable results for
+          clients, and a culture that keeps improving with every site we serve. We invest in training, safety, and the
+          right tools so every team member can do their best work. We also keep communication simple and proactive, so
+          clients always know what to expect and when. That partnership mindset is how we continue to grow, along with
+          reliable people, steady results, and a commitment to doing the job right.
+        </p>
       </div>
     </Container>
   </section>

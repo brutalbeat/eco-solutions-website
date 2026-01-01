@@ -1,5 +1,5 @@
 site:
-  name: EcoLog Solutions
+  name: Ecolog Solutions
   site: 'https://ecologsolutions.netlify.app'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: EcoLog Solutions
-    template: '%s | EcoLog Solutions'
+    default: Ecolog Solutions
+    template: '%s | Ecolog Solutions'
   description: 'Commercial cleaning and janitorial services for offices, retail, and facilities. Reliable teams, clear checklists, and flexible schedules.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: EcoLog Solutions
+    site_name: Ecolog Solutions
     images:
       - url: '~/assets/images/default.png'
         width: 1200
