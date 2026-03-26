@@ -1,5 +1,5 @@
 export const company = {
-  name: 'Ecolog Solutions',
+  name: 'Ecolog Building Services and Solutions',
   tagline: 'Building Services and Solutions',
   serviceArea: 'Serving the GTA since 2018',
   phone: '+1 (647) 700-5611',
