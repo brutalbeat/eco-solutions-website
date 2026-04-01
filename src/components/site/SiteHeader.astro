@@ -6,16 +6,16 @@ import { company, companyLinks } from '~/data/company';
 <header class="sticky top-0 z-50 border-b border-primary/30 bg-slate-950">
   <Container class="py-3">
     <div class="flex items-center justify-between gap-4">
-      <a href="/" class="flex items-center font-semibold tracking-tight text-white shrink-0">
+      <a href="/" class="flex items-center shrink-0 font-semibold tracking-tight text-white">
         <img
           src="/axiomtransparent.png"
           alt={`${company.name} logo`}
-          class="h-[120px] sm:h-[138px] md:h-[154px] w-auto rounded-md"
+          class="h-[128px] w-auto drop-shadow-[0_10px_22px_rgba(255,255,255,0.18)] sm:h-[146px] md:h-[162px]"
           loading="lazy"
         />
       </a>
 
-      <nav class="hidden flex-1 items-center justify-center gap-12 md:flex" aria-label="Primary">
+      <nav class="hidden flex-1 items-center justify-center gap-9 md:flex" aria-label="Primary">
         <a
           class="text-lg font-semibold text-white hover:text-accent"
           href="/"
