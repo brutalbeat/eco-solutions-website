@@ -3,39 +3,39 @@ import Container from '~/components/site/Container.astro';
 import { company, companyLinks } from '~/data/company';
 ---
 
-<header class="sticky top-0 z-50 border-b border-primary/30 bg-slate-950">
+<header class="sticky top-0 z-50 border-b border-primary/30 bg-[#b7d8f2]">
   <Container class="py-3">
     <div class="flex items-center justify-between gap-4">
-      <a href="/" class="flex items-center shrink-0 font-semibold tracking-tight text-white">
+      <a href="/" class="flex items-center shrink-0 font-semibold tracking-tight text-gray-900">
         <img
           src="/axiomtransparent.png"
           alt={`${company.name} logo`}
-          class="h-[128px] w-auto drop-shadow-[0_10px_22px_rgba(255,255,255,0.18)] sm:h-[146px] md:h-[162px]"
+          class="h-[128px] w-auto drop-shadow-[0_10px_22px_rgba(0,0,0,0.16)] sm:h-[146px] md:h-[162px]"
           loading="lazy"
         />
       </a>
 
       <nav class="hidden flex-1 items-center justify-center gap-9 md:flex" aria-label="Primary">
         <a
-          class="text-lg font-semibold text-white hover:text-accent"
+          class="text-lg font-semibold text-gray-900 hover:text-accent"
           href="/"
         >
           Home
         </a>
         <a
-          class="text-lg font-semibold text-white hover:text-accent"
+          class="text-lg font-semibold text-gray-900 hover:text-accent"
           href="/services"
         >
           Services
         </a>
         <a
-          class="text-lg font-semibold text-white hover:text-accent"
+          class="text-lg font-semibold text-gray-900 hover:text-accent"
           href="/about"
         >
           About Us
         </a>
         <a
-          class="text-lg font-semibold text-white hover:text-accent"
+          class="text-lg font-semibold text-gray-900 hover:text-accent"
           href={companyLinks.careers}
         >
           Careers
@@ -51,13 +51,13 @@ import { company, companyLinks } from '~/data/company';
           <span class="sr-only">Open menu</span>
           Menu
         </summary>
-        <div class="absolute left-0 right-0 top-[60px] border-b border-primary/30 bg-slate-950">
+        <div class="absolute left-0 right-0 top-[60px] border-b border-primary/30 bg-[#b7d8f2]">
           <Container class="py-4">
             <nav class="grid gap-3" aria-label="Mobile">
-              <a class="py-2 text-sm font-medium text-white" href="/">Home</a>
-              <a class="py-2 text-sm font-medium text-white" href="/services">Services</a>
-              <a class="py-2 text-sm font-medium text-white" href="/about">About Us</a>
-              <a class="py-2 text-sm font-medium text-white" href={companyLinks.careers}>Careers</a>
+              <a class="py-2 text-sm font-medium text-gray-900" href="/">Home</a>
+              <a class="py-2 text-sm font-medium text-gray-900" href="/services">Services</a>
+              <a class="py-2 text-sm font-medium text-gray-900" href="/about">About Us</a>
+              <a class="py-2 text-sm font-medium text-gray-900" href={companyLinks.careers}>Careers</a>
               <a class="btn-primary mt-2 w-full" href="/#contact">Contact</a>
             </nav>
           </Container>
