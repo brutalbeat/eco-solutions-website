@@ -1,11 +1,12 @@
 ---
 import SiteLayout from '~/layouts/SiteLayout.astro';
 import Container from '~/components/site/Container.astro';
+import { company } from '~/data/company';
 
 const metadata = {
   title: 'About Us',
   description:
-    'Learn how Ecolog Solutions delivers reliable commercial cleaning with clear checklists, consistent teams, and proactive communication.',
+    `Learn how ${company.name} delivers reliable commercial cleaning with clear checklists, consistent teams, and proactive communication.`,
 };
 ---
 
@@ -63,8 +64,8 @@ const metadata = {
             class="h-full w-full overflow-hidden rounded-3xl border border-primary bg-white shadow-sm dark:border-primary/60 dark:bg-slate-950"
           >
             <img
-              src="/ecolog10.png"
-              alt="Ecolog team at work"
+              src="/axiomstaff2.png"
+              alt="Axiom team at work"
               class="block h-full w-full object-cover"
               loading="lazy"
             />
@@ -75,7 +76,7 @@ const metadata = {
       <div class="mt-10 space-y-3">
         <h2 class="text-3xl font-bold tracking-tight text-white dark:text-white sm:text-4xl">Our story</h2>
         <p class="w-full text-sm text-muted sm:text-base">
-          Ecolog started as a small crew focused on dependable cleaning and clear checklists. Over the years, we grew by
+          Axiom started as a small crew focused on dependable cleaning and clear checklists. Over the years, we grew by
           earning trust: adding trained teams, safety programs, and specialized services that support regulated
           facilities. Today, our legacy is built on consistency: the same care for people, predictable results for
           clients, and a culture that keeps improving with every site we serve. We invest in training, safety, and the

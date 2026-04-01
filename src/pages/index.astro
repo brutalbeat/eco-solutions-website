@@ -1,17 +1,18 @@
 ---
 import SiteLayout from '~/layouts/SiteLayout.astro';
 import Container from '~/components/site/Container.astro';
+import { company } from '~/data/company';
 
 const metadata = {
   title: 'Commercial Cleaning & Janitorial Services',
   description:
-    'Ecolog Building Services and Solutions provides dependable commercial cleaning for offices, retail, and facilities. Clear checklists, flexible schedules, and consistent results.',
+    `${company.name} provides dependable commercial cleaning for offices, retail, and facilities. Clear checklists, flexible schedules, and consistent results.`,
 };
 ---
 
 <SiteLayout metadata={metadata}>
   <section class="relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-b from-[#e2e2e2] to-transparent dark:from-[#1e1717]/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-[#e2e2e2] to-transparent dark:from-[#10253b]/40"></div>
     <Container class="relative py-14 sm:py-20">
       <div class="grid items-center gap-10 lg:grid-cols-12 lg:items-stretch">
         <div class="lg:col-span-6 flex flex-col justify-center gap-6">
@@ -25,7 +26,7 @@ const metadata = {
           <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a class="btn-primary w-full sm:w-auto" href="/services">View services</a>
             <a
-              class="inline-flex w-full items-center justify-center rounded-full border-2 border-[#ba2b34] bg-transparent px-6 py-3 font-semibold text-[#ba2b34] transition hover:bg-[#ba2b34] hover:text-white focus-visible:outline-none focus:ring-2 focus:ring-[#ba2b34] focus:border-[#ba2b34] sm:w-auto"
+              class="inline-flex w-full items-center justify-center rounded-full border-2 border-[#1670b8] bg-transparent px-6 py-3 font-semibold text-[#1670b8] transition hover:bg-[#1670b8] hover:text-white focus-visible:outline-none focus:ring-2 focus:ring-[#1670b8] focus:border-[#1670b8] sm:w-auto"
               href="/#contact"
             >
               Contact us
@@ -38,7 +39,7 @@ const metadata = {
             <div
               class="rounded-3xl border border-primary bg-white p-0 shadow-sm dark:border-primary/60 dark:bg-slate-950 overflow-hidden w-full"
             >
-              <img src="/ecolog1.png" alt="Ecolog logo and mark" class="h-full w-full object-cover" loading="lazy" />
+              <img src="/ecolog1.png" alt="Axiom logo and mark" class="h-full w-full object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -48,7 +49,7 @@ const metadata = {
         class="mt-10 overflow-hidden rounded-2xl border border-primary bg-white/80 text-sm text-muted shadow-sm dark:border-primary/60 dark:bg-slate-950/50"
       >
         <div
-          class="grid divide-y divide-[#ba2b34]/20 dark:divide-[#ba2b34]/30 sm:grid-cols-3 sm:divide-y-0 sm:divide-x"
+          class="grid divide-y divide-[#1670b8]/20 dark:divide-[#1670b8]/30 sm:grid-cols-3 sm:divide-y-0 sm:divide-x"
         >
           <div class="p-6 text-center">
             <span class="block text-5xl font-extrabold text-primary">100+</span>
@@ -108,14 +109,14 @@ const metadata = {
     </Container>
   </section>
 
-  <section class="bg-gradient-to-b from-transparent to-[#e0e0e0] dark:to-[#1e1717]/30">
+  <section class="bg-gradient-to-b from-transparent to-[#e0e0e0] dark:to-[#10253b]/30">
     <Container class="py-14">
       <div class="grid gap-8 md:grid-cols-12 md:items-stretch">
         <div class="md:col-span-6">
           <div
             class="overflow-hidden rounded-3xl border border-primary bg-white shadow-sm dark:border-primary/60 dark:bg-slate-950"
           >
-            <img src="/ecolog2.png" alt="Ecolog team" class="h-full w-full object-cover" loading="lazy" />
+            <img src="/axiomstaff.png" alt="Axiom team" class="h-full w-full object-cover" loading="lazy" />
           </div>
         </div>
 
@@ -124,7 +125,7 @@ const metadata = {
             Our strength is in our team
           </h2>
           <p class="text-sm text-muted sm:text-base">
-            Ecolog’s legacy is built on people who care about doing the job right. We invest in training, safety, and
+            Axiom’s legacy is built on people who care about doing the job right. We invest in training, safety, and
             stability so crews can focus on quality. Our clients can feel the difference.
           </p>
           <p class="text-sm text-muted sm:text-base">
@@ -143,7 +144,7 @@ const metadata = {
       <div class="mx-auto max-w-5xl space-y-8">
         <div>
           <h2 class="text-3xl font-bold tracking-tight text-white dark:text-white sm:text-4xl">Reviews</h2>
-          <p class="mt-2 text-sm text-muted">See what clients say about working with Ecolog.</p>
+          <p class="mt-2 text-sm text-muted">See what clients say about working with Axiom.</p>
         </div>
 
         <div class="grid gap-6 md:grid-cols-3">

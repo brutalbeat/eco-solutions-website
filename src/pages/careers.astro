@@ -6,7 +6,7 @@ import { company } from '~/data/company';
 const metadata = {
   title: 'Careers',
   description:
-    'Careers at Ecolog Solutions. Build a dependable routine, take pride in clean work, and grow with a commercial cleaning team.',
+    `Careers at ${company.name}. Build a dependable routine, take pride in clean work, and grow with a commercial cleaning team.`,
 };
 
 const applyEmail = company.email;
@@ -21,7 +21,7 @@ const applySubject = encodeURIComponent('Career inquiry');
         Build a career in <span class="text-primary dark:text-accent">trusted</span> facility care
       </h1>
       <p class="mt-4 max-w-3xl text-base leading-7 text-muted sm:text-lg">
-        Ecolog Solutions hires dependable people who care about <span class="text-white dark:text-white font-semibold"
+        {company.name} hires dependable people who care about <span class="text-white dark:text-white font-semibold"
           >details</span
         >, <span class="text-white dark:text-white font-semibold">safety</span>, and <span
           class="text-white dark:text-white font-semibold">consistency</span
@@ -88,10 +88,10 @@ const applySubject = encodeURIComponent('Career inquiry');
         </div>
       </div>
 
-      <div class="mt-12 rounded-3xl border border-primary bg-[#ededed] p-6 dark:border-primary/60 dark:bg-[#1e1717]/30">
+      <div class="mt-12 rounded-3xl border border-primary bg-[#ededed] p-6 dark:border-primary/60 dark:bg-[#10253b]/30">
         <h2 class="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">Equal opportunity</h2>
         <p class="mt-2 text-sm text-white">
-          Ecolog Solutions is committed to providing equal employment opportunities. Hiring decisions are based on role
+          {company.name} is committed to providing equal employment opportunities. Hiring decisions are based on role
           requirements, reliability, and job performance.
         </p>
       </div>
